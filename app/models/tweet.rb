@@ -26,7 +26,7 @@ class Tweet
 	end
 
 	def date_format
-		
+
 		d = DateTime.parse(self.date)
 		d.strftime('%d/%m/%y %H:%M:%S')
 	end
