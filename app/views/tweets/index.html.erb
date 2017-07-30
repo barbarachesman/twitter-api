@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <title>Extração de Dados Twitter</title>
+</head>
+
+<body>
+  <div class="topo">
+    <ol class="breadcrumb">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <a class="navbar-brand ">Extração e Analise de Dados do Twitter</a>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+
+          <li>
+            <a class="page-scroll" href="#relevants">Mais relevantes</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#mencioned">Mais mencionados</a>
+          </li>
+        </ul>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </ol>
+    <!-- Navigation -->
+
+
+  </div>
+
+  <% unless @error %>
+
+  <% @users_tweets.each do |user| %>
+  <div class=" col-md-8 ">
+    <% user.tweets.each do |tweet| %>
+  </br> <strong>Autor: </strong><%= link_to "#{user.name}", "#{user.url}" %></br>
+  <strong>Número de seguidores do autor: </strong> <%= "#{user.fallowers}"%></br>
+  <strong>Retweets:</strong> <%= "#{tweet.retweets}" %></br>
+  <strong>Likes do tweet: </strong> <%= "#{tweet.likes}" %></br>
+  <strong>Tweet:</strong><%= link_to "#{tweet.text}", "#{tweet.url}" %></br>
+  <strong>Data:</strong> <%= "#{tweet.date_format}" %>
+</div></br></br></br></br></br>
+
+<% end %>
+</div>
+<% end %>
+<% else %>
+<div class="container col-md-4 col-md-offset-4 text-center">
+  <h3> Falha na API - Consulte o desenvolvedor <h3>
+  </div>
+
+  <% end %>
+  <br />
+  </body>
+
+  <footer class="text-center">
+    <!-- Default to the left -->
+    <strong>Copyleft <i class="fa fa-creative-commons"></i> <a href="https://github.com/chesman12/twitter-api">Extração de Dados de uma API</a></strong>.
+  </footer>
+
+</html>

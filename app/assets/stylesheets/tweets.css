@@ -1,0 +1,36 @@
+body{
+	background-color: 	#FFE4B5;
+}
+
+
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+   color: rgb(150, 32, 56);
+   outline: 0
+}
+
+.navbar-default .navbar-nav>.active>a {
+   background-color: rgb(150, 32, 56);
+}
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+   background-color: rgb(139, 19, 43);
+}
+
+.bloco{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+.titulo{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	color:black;
+	background-color:#FFDEAD;
+	margin-bottom:25px;
+	font-size:60px;
+	padding: 20px;
+}
+.status-tweets{
+	margin-top:20px;
+	margin-bottom:20px;
+}

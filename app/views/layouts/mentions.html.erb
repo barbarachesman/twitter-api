@@ -1,0 +1,61 @@
+<head>
+    <title>Extração de Dados Twitter</title>
+</head>
+
+<body>
+  <div class="topo">
+    <ol class="breadcrumb">
+      <nav id="mainNav" class="navbar navbar-default navbar-custom affix-top navbar-fixed-top">
+          <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header page-scroll">
+
+                 <a class="navbar-brand page-scroll">Extração e Analise de Dados do Twitter</a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <ul class="nav navbar-nav navbar-right">
+                      <li>
+                          <a class="page-scroll" href="#relevants">Mais relevantes</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#mentions">Mais mencionados</a>
+                      </li>
+                 </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+      </nav>
+    </ol>
+    <!-- Navigation -->
+
+
+  </div>
+
+</body>
+
+<% unless @error %>
+
+<% @users_tweets.each do |user| %>
+<div class=" col-md-8 ">
+		<% user.tweets.each do |tweet| %>
+					 </br> <strong>Autor: </strong><%= link_to "#{user.name}", "#{user.url}" %></br>
+						<strong>Número de seguidores do autor: </strong> <%= "#{user.fallowers}"%></br>
+						<strong>Retweets:</strong> <%= "#{tweet.retweets}" %></br>
+						<strong>Likes do tweet: </strong> <%= "#{tweet.likes}" %></br>
+						<strong>Data:</strong> <%= "#{tweet.date_format}" %></br>
+						<strong>Tweet:</strong><%= link_to "#{tweet.text}", "#{tweet.url}" %></div></br></br>
+
+		<% end %>
+</div>
+<% end %>
+<% else %>
+<div class="container col-md-4 col-md-offset-4 text-center">
+	<h3> Ocorreu um erro no sistema <h3>
+</div>
+
+
+
+<% end %>
