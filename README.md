@@ -1,5 +1,7 @@
 # Problema da listagem de Tweets
 
+![Screenshot](screenshot.png)
+
 Você deve assumir o seguinte problema hipotético:
 
 ```
@@ -65,3 +67,22 @@ URIs:
     
 /most_mentions
     Mostra os usuários que mais mencionaram a locaweb
+    
+    
+## Porque usar Ruby on Rails para resolver o problema?
+
+Com o estudo dessas tecnologias, principalmente a facilidade de trabalhar com as bibliotecas do Ruby, as Gems, fica mais fácil conseguir gerenciar o que é necessário para a aplicação, criar modelos a partir de linhas de comando, facilita muito o desenvolvimento da aplicação. Além de que a comunidade de desenvolvedores disponibiliza muitos materiais.
+
+## JSON
+
+Utilizar o JSON para manutenção dos objetos, neste caso foi utilizado para fazer trocar de dados do Front-end para a troca de informações com o Back-end. Além de se obter o objeto e fazer o parse para controlar-los.
+    
+    
+## Referências:
+https://dev.twitter.com/rest/reference
+
+https://imasters.com.br/artigo/23173/ruby/mineracao-de-dados-com-ruby-e-twitter/?trace=1519021197&source=single
+
+http://geekhmer.github.io/blog/2015/02/18/ruby-on-rails-parsing-json/
+
+https://www.distelli.com/docs/tutorials/build-and-deploy-ruby-on-rails-with-docker/
